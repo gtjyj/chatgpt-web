@@ -56,6 +56,7 @@ export function get<T = any>(
   { url, data, method = 'GET', onDownloadProgress, signal, beforeRequest, afterRequest }: HttpOption,
 ): Promise<Response<T>> {
   return http<T>({
+    // url: `https://code3d.cn/api${url}`,
     url,
     method,
     data,
@@ -69,7 +70,9 @@ export function get<T = any>(
 export function post<T = any>(
   { url, data, method = 'POST', headers, onDownloadProgress, signal, beforeRequest, afterRequest }: HttpOption,
 ): Promise<Response<T>> {
+  // debugger
   return http<T>({
+    // url: `https://code3d.cn/api${url}`,
     url,
     method,
     data,

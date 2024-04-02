@@ -28,9 +28,9 @@ async function handleVerify() {
 
   try {
     loading.value = true
-    await fetchVerify(secretKey)
+    const data = await fetchVerify(secretKey)
     authStore.setToken(secretKey)
-    ms.success('success')
+    ms.success(`授权通过，你的授权还剩余${data.data}次`)
     window.location.reload()
   }
   catch (error: any) {

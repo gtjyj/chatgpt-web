@@ -58,6 +58,12 @@ export function fetchSession<T>() {
   })
 }
 
+export function fetchBalance<T>() {
+  return post<T>({
+    url: '/balance',
+  })
+}
+
 export function fetchVerify<T>(token: string) {
   return post<T>({
     url: '/verify',
