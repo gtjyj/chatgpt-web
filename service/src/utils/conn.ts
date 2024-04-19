@@ -1,5 +1,5 @@
 export const dbconfig = {
-  host: '43.128.2.39',
+  host: '10.0.4.7',
   port: 3306,
   user: 'root',
   password: 'simonju1',
